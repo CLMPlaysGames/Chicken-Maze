@@ -1,0 +1,64 @@
+[gd_scene load_steps=37 format=2]
+
+[ext_resource path="res://Horse.gd" type="Script" id=1]
+[ext_resource path="res://Graphics/Horse/idle/idle01.png" type="Texture" id=2]
+[ext_resource path="res://Graphics/Horse/idle/idle02.png" type="Texture" id=3]
+[ext_resource path="res://Graphics/Horse/idle/idle03.png" type="Texture" id=4]
+[ext_resource path="res://Graphics/Horse/idle/idle04.png" type="Texture" id=5]
+[ext_resource path="res://Graphics/Horse/idle/idle05.png" type="Texture" id=6]
+[ext_resource path="res://Graphics/Horse/idle/idle06.png" type="Texture" id=7]
+[ext_resource path="res://Graphics/Horse/idle/idle07.png" type="Texture" id=8]
+[ext_resource path="res://Graphics/Horse/idle/idle08.png" type="Texture" id=9]
+[ext_resource path="res://Graphics/Horse/idle/idle09.png" type="Texture" id=10]
+[ext_resource path="res://Graphics/Horse/idle/idle10.png" type="Texture" id=11]
+[ext_resource path="res://Graphics/Horse/idle/idle11.png" type="Texture" id=12]
+[ext_resource path="res://Graphics/Horse/idle/idle12.png" type="Texture" id=13]
+[ext_resource path="res://Graphics/Horse/idle/idle13.png" type="Texture" id=14]
+[ext_resource path="res://Graphics/Horse/idle/idle14.png" type="Texture" id=15]
+[ext_resource path="res://Graphics/Horse/idle/idle15.png" type="Texture" id=16]
+[ext_resource path="res://Graphics/Horse/idle/idle16.png" type="Texture" id=17]
+[ext_resource path="res://Graphics/Horse/idle/idle17.png" type="Texture" id=18]
+[ext_resource path="res://Graphics/Horse/idle/idle18.png" type="Texture" id=19]
+[ext_resource path="res://Graphics/Horse/idle/idle19.png" type="Texture" id=20]
+[ext_resource path="res://Graphics/Horse/idle/idle20.png" type="Texture" id=21]
+[ext_resource path="res://Graphics/Horse/idle/idle21.png" type="Texture" id=22]
+[ext_resource path="res://Graphics/Horse/idle/idle22.png" type="Texture" id=23]
+[ext_resource path="res://Graphics/Horse/idle/idle23.png" type="Texture" id=24]
+[ext_resource path="res://Graphics/Horse/idle/idle24.png" type="Texture" id=25]
+[ext_resource path="res://Graphics/Horse/idle/idle25.png" type="Texture" id=26]
+[ext_resource path="res://Graphics/Horse/walking/horse1.png" type="Texture" id=27]
+[ext_resource path="res://Graphics/Horse/walking/horse2.png" type="Texture" id=28]
+[ext_resource path="res://Graphics/Horse/walking/horse3.png" type="Texture" id=29]
+[ext_resource path="res://Graphics/Horse/walking/horse4.png" type="Texture" id=30]
+[ext_resource path="res://Graphics/Horse/walking/horse5.png" type="Texture" id=31]
+[ext_resource path="res://Graphics/Horse/walking/horse6.png" type="Texture" id=32]
+[ext_resource path="res://Graphics/Horse/walking/horse7.png" type="Texture" id=33]
+[ext_resource path="res://Graphics/Horse/walking/horse8.png" type="Texture" id=34]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ) ],
+"loop": true,
+"name": "idle",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ) ],
+"loop": true,
+"name": "walking",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 25.9115, 16.9096 )
+
+[node name="Horse" type="StaticBody2D" groups=[
+"horse",
+]]
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "walking"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
